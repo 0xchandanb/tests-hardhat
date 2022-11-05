@@ -10,11 +10,13 @@ describe("StructLibro", function(){
          ContractInstance = await ContractFactory.deploy();
         await ContractInstance.deployed();
     })
-})
 
-describe("Test Set", function(){
-    it("Should set a book", async function(){
-        const setLibro = await ContractInstance.setLibro("La odisea", "Homero", 120,4);
-        const setLibroRecip = await setLibro.wait();
+
+    describe("Test Set", function(){
+        it("Should set a book", async function(){
+            const setLibro = await ContractInstance.setLibro("La odisea", "Homero", 120,4);
+            const setLibroRecip = await setLibro.wait();
+        })
     })
+
 })

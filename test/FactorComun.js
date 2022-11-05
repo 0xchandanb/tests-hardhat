@@ -10,12 +10,14 @@ describe("FactorComun", function(){
         ContractInstance = await ContractFactory.deploy();
         await ContractInstance.deployed();
     })
-})
 
-describe("Result test", function(){
-    it("Should do the MCD with 2 arguments", async function(){
-        const factor = await ContractInstance.factorComunMasAlto(60, 75);
-        await factor.wait();
-        console.dir(factor);
+
+    describe("Result test", function(){
+        it("Should do the MCD with 2 arguments", async function(){
+            const factor = await ContractInstance.factorComunMasAlto(60, 75);
+            await factor.wait();
+            console.dir(factor);
+        })
     })
+
 })
