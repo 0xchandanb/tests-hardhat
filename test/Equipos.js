@@ -18,8 +18,8 @@ describe("Equipos test", function(){
 
     describe("Set Address", function(){
         it("Should set a address as a team", async function(){
-            let setTeam =await ContractInstance.setPlayers(await signers.deployer.getAddress());
-            await setTeam.wait();
+            let setTeam =await ContractInstance.setPlayers(await signers.deployer.address);
+            expect(await ContractInstance.getEquipo(0)).to.equal(signers.deployer.address);
         })
     })
 
