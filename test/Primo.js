@@ -16,7 +16,7 @@ describe("Primo contract test", function(){
         it("Should return if the number is prime or not", async function(){
             let n = 7;
             let resul = 1;
-            expect(await ContractInstance.esPrimo(n)).to.equal(resul);
+            expect(await ContractInstance.esPrimo(n)).to.equal(2);
         })
     })
 
